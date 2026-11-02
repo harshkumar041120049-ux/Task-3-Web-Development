@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyQuest | Weather & Quiz</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+
+    <header class="navbar">
+        <a class="brand" href="#">
+            <span class="brand-icon">☁</span>
+            Sky<span>Quest</span>
+        </a>
+        <span class="nav-label">WEATHER & LEARNING</span>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <span class="eyebrow">✦ YOUR DAILY WEATHER SPACE</span>
+            <h1>Explore the sky.<br><span>Discover more.</span></h1>
+            <p>Check the weather, plan your day and challenge your knowledge.</p>
+        </section>
+
+        <!-- WEATHER SECTION FIRST -->
+        <section class="weather-section">
+            <div class="section-heading">
+                <div>
+                    <span class="section-kicker">01 / LIVE CONDITIONS</span>
+                    <h2>Weather Dashboard</h2>
+                </div>
+                <span class="live-badge"><span></span> LIVE WEATHER</span>
+            </div>
+
+            <div class="weather-card">
+                <div class="weather-top">
+                    <div>
+                        <p class="muted">YOUR LOCATION</p>
+                        <h3 id="cityName">Discover your weather</h3>
+                        <p id="weatherDescription">Search a city to get started</p>
+                    </div>
+                    <div class="weather-icon" id="weatherIcon">☀️</div>
+                </div>
+
+                <form id="weatherForm" class="search-form">
+                    <input id="cityInput" type="text"
+                        placeholder="Enter city name, e.g. Delhi"
+                        aria-label="City name" required>
+                    <button type="submit">Check Weather <span>↗</span></button>
+                </form>
+
+                <p id="weatherMessage" class="message" aria-live="polite"></p>
+
+                <div class="temperature-row">
+                    <div class="temperature">
+                        <span id="temperature">--</span><sup>°C</sup>
+                    </div>
+                    <div class="feels-like">
+                        <span>FEELS LIKE</span>
+                        <strong id="feelsLike">--°C</strong>
+                    </div>
+                </div>
+
+                <div class="weather-stats">
+                    <div class="stat-card">
+                        <span class="stat-icon">💧</span>
+                        <span class="stat-label">Humidity</span>
+                        <strong id="humidity">--%</strong>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-icon">💨</span>
+                        <span class="stat-label">Wind Speed</span>
+                        <strong id="wind">-- km/h</strong>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-icon">🌡️</span>
+                        <span class="stat-label">Condition</span>
+                        <strong id="condition">--</strong>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- QUIZ SECTION BELOW WEATHER -->
+        <section class="quiz-section">
+            <div class="section-heading">
+                <div>
+                    <span class="section-kicker">02 / TEST YOUR KNOWLEDGE</span>
+                    <h2>Weather Quiz</h2>
+                </div>
+                <span class="quiz-badge">✦ QUICK CHALLENGE</span>
+            </div>
+
+            <div class="quiz-card">
+                <div class="quiz-top">
+                    <div>
+                        <p class="muted">A LITTLE KNOWLEDGE GOES A LONG WAY</p>
+                        <h3>How well do you know the weather?</h3>
+                    </div>
+                    <div class="quiz-symbol">✧</div>
+                </div>
+
+                <div class="progress-info">
+                    <span id="questionCounter">Question 1 of 5</span>
+                    <span id="scoreLabel">Score: 0</span>
+                </div>
+                <div class="progress-track">
+                    <div id="progressBar" class="progress-bar"></div>
+                </div>
+
+                <h4 id="questionText">Loading question...</h4>
+                <div id="optionsContainer" class="options"></div>
+                <p id="quizFeedback" class="message" aria-live="polite"></p>
+
+                <div class="quiz-actions">
+                    <button id="nextButton" class="primary-button" disabled>
+                        Next Question →
+                    </button>
+                    <button id="restartButton" class="secondary-button" hidden>
+                        Try Again ↻
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <a class="brand footer-brand" href="#">Sky<span>Quest</span></a>
+            <p>Designed with curiosity ✦ Powered by the web</p>
+            <span>© 2026 SkyQuest</span>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
